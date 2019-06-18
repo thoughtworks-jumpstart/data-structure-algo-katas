@@ -1,14 +1,14 @@
-const FixedQueue = require('./fixedQueue');
+const FixedLengthQueue = require('./fixedLengthQueue');
 
-describe('FixedQueue', () => {
+describe('FixedLengthQueue', () => {
   it('can enqueue and dequeue', () => {
-    const fixedQueue = new FixedQueue(3);
+    const fixedQueue = new FixedLengthQueue(3);
     fixedQueue.enqueue('apple');
     expect(fixedQueue.dequeue()).toEqual('apple');
   });
 
   it('can maintain the order', () => {
-    const fixedQueue = new FixedQueue(3);
+    const fixedQueue = new FixedLengthQueue(3);
     fixedQueue.enqueue('apple');
     fixedQueue.enqueue('banana');
     fixedQueue.enqueue('citrus');
@@ -19,14 +19,14 @@ describe('FixedQueue', () => {
   });
 
   it('cannot insert more than the max length', () => {
-    const fixedQueue = new FixedQueue(2);
+    const fixedQueue = new FixedLengthQueue(2);
     fixedQueue.enqueue('apple');
     fixedQueue.enqueue('banana');
     expect(() => fixedQueue.enqueue('citrus')).toThrow(Error);
   });
 
   it('cannot insert more than the max length even after dequeue', () => {
-    const fixedQueue = new FixedQueue(2);
+    const fixedQueue = new FixedLengthQueue(2);
     fixedQueue.enqueue('apple');
     fixedQueue.enqueue('banana');
     fixedQueue.dequeue();
@@ -34,7 +34,7 @@ describe('FixedQueue', () => {
   });
 
   it('can peek', () => {
-    const fixedQueue = new FixedQueue(2);
+    const fixedQueue = new FixedLengthQueue(2);
     expect(fixedQueue.peek()).toEqual(undefined);
     fixedQueue.enqueue('apple');
     fixedQueue.enqueue('banana');

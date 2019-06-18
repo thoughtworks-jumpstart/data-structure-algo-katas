@@ -1,4 +1,4 @@
-const CircularQueue = require('./circular-queue');
+const CircularQueue = require('./circularQueue');
 
 describe('Circular Queue', () => {
   it('should be able to enqueue and dequeue', () => {
