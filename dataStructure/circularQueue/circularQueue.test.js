@@ -52,19 +52,19 @@ describe('Circular Queue', () => {
   it('should be able to peek the correct item after dequeue', () => {
     const cq = new CircularQueue(3);
     expect(cq.peek()).toEqual(undefined);
-    expect(cq.dequeue()).toEqual(undefined);
+    expect(() => cq.dequeue()).toThrowError('no item in queue');
     cq.enqueue('apple');
     cq.enqueue('banana');
-    cq.enqueue('cirtus');
+    cq.enqueue('citrus');
     expect(cq.peek()).toEqual('apple');
     expect(cq.dequeue()).toEqual('apple');
     expect(cq.peek()).toEqual('banana');
     expect(cq.dequeue()).toEqual('banana');
     expect(cq.peek()).toEqual('citrus');
     expect(cq.dequeue()).toEqual('citrus');
-    expect(cq.dequeue()).toEqual(undefined);
+    expect(() => cq.dequeue()).toThrowError('no item in queue');
     expect(cq.peek()).toEqual(undefined);
-    expect(cq.getSize()).toEqual(2);
+    expect(cq.getSize()).toEqual(3);
   });
 
   it('cannot enqueue undefined', () => {
