@@ -1,6 +1,11 @@
 const FixedLengthQueue = require('./fixedLengthQueue');
 
 describe('FixedLengthQueue', () => {
+  it('should create an array of length passed in', () => {
+    const fixedQueue = new FixedLengthQueue(3);
+    expect(fixedQueue.getSize()).toEqual(3);
+  });
+
   it('can enqueue and dequeue', () => {
     const fixedQueue = new FixedLengthQueue(3);
     fixedQueue.enqueue('apple');
