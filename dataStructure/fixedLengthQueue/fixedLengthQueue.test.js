@@ -44,5 +44,7 @@ describe('FixedLengthQueue', () => {
     fixedQueue.enqueue('apple');
     fixedQueue.enqueue('banana');
     expect(fixedQueue.peek()).toEqual('apple');
+    expect(fixedQueue.dequeue()).toEqual('apple');
+    expect(fixedQueue.peek()).toEqual('banana');
   });
 });
