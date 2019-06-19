@@ -1,31 +1,33 @@
 module.exports = class FixedLengthQueue {
   constructor(length) {
-    this.queue = new Array(length);
-    this.start = 0;
-    this.end = 0;
-    this.maxLength = length;
+    this.array = new Array(length);
+    this.toInsert = 0;
+    this.toDequeue = 0;
+    this.length = length;
   }
 
   enqueue(item) {
-    if (this.end === this.maxLength) {
-      throw new Error();
+    if (this.toInsert >= this.length) {
+      throw new Error('max reached');
     }
-
-    this.queue[this.end++] = item;
+    this.array[this.toInsert] = item;
+    this.toInsert++;
   }
 
   dequeue() {
-    if (this.start === this.end) {
-      return undefined;
+    if (this.toDequeue < this.toInsert) {
+      return this.array[this.toDequeue++];
     }
-
-    const item = this.queue[this.start];
-    this.queue[this.start] = undefined;
-    this.start++;
-    return item;
   }
 
   peek() {
-    return this.queue[this.start];
+    if (this.toDequeue < this.toInsert) {
+      console.log(this.Dequeue);
+      return this.array[this.toDequeue];
+    }
+  }
+
+  getSize() {
+    return this.array.length;
   }
 };
