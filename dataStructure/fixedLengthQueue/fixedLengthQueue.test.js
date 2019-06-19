@@ -47,4 +47,25 @@ describe('FixedLengthQueue', () => {
     expect(fixedQueue.dequeue()).toEqual('apple');
     expect(fixedQueue.peek()).toEqual('banana');
   });
+
+  it('can peek correctly after dequeue', () => {
+    const fixedQueue = new FixedLengthQueue(3);
+    expect(fixedQueue.dequeue()).toEqual(undefined);
+    expect(fixedQueue.peek()).toEqual(undefined);
+    fixedQueue.enqueue('apple');
+    fixedQueue.enqueue('banana');
+    fixedQueue.enqueue('citrus');
+
+    expect(fixedQueue.peek()).toEqual('apple');
+    expect(fixedQueue.dequeue()).toEqual('apple');
+
+    expect(fixedQueue.peek()).toEqual('banana');
+    expect(fixedQueue.dequeue()).toEqual('banana');
+
+    expect(fixedQueue.peek()).toEqual('citrus');
+    expect(fixedQueue.dequeue()).toEqual('citrus');
+
+    expect(fixedQueue.peek()).toEqual(undefined);
+    expect(fixedQueue.dequeue()).toEqual(undefined);
+  });
 });
