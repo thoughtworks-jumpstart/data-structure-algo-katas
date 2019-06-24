@@ -10,6 +10,7 @@ This is not course material and has nothing related to the course.
 2. stack
 3. fixedLengthQueue
 4. circular queue
+5. linkedList
 
 ### suggested path for algorithm
 
