@@ -35,9 +35,3 @@ LinkedList
 - getAt(Number): should return the nth number of node in the list
 - insertAt(Number, Node): should insert at the nth number in a list
 - removeAt(Number): should remove the nth number of item in the list
-
-1. (length) // create a array using new Array(<size of array>);
-2. enqueue(item) // takes in an item and adds it to the stack. Throws an error if the queue is full.
-3. dequeue // remove and return the first item that is in the stack
-4. peek // return the first item that is in the stack
-5. getSize // return the size/length of the Array.
