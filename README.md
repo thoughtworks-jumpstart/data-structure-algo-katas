@@ -1,18 +1,19 @@
-# kata-for-fun
+# data structures and algorithms katas
 
 For people who have nothing better to do
 
 This is not course material and has nothing related to the course.
 
-### Suggested path for data structure.
+### Suggested path for data structures
 
+1. fixedLengthArray
 1. queue
-2. stack
-3. fixedLengthQueue
-4. circular queue
-5. linkedList
+1. stack
+1. fixedLengthQueue
+1. circularQueue
+1. linkedList
 
-### suggested path for algorithm
+### Suggested path for algorithms
 
 1. binary search
 
@@ -24,14 +25,20 @@ This is not course material and has nothing related to the course.
 
 ## Run
 
-example for running test for Queue only,
+Run tests for a specific data structure (Example uses queue):
 
 ```
    npx jest --testNamePattern="Queue"
 ```
 
-if name pattern crashes, you can use in file path
+If name pattern crashes, you can use the exact file path
 
 ```
  npx jest dataStructure/queue/queue.test.js
+```
+
+Run a .js file (Example uses array-playground.js)
+
+```
+  node dataStructure/array/array-playground.js
 ```
