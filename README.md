@@ -1,11 +1,10 @@
 # data structures and algorithms katas
 
-For people who have nothing better to do
-
-This is not course material and has nothing related to the course.
+To be a data structures and algorithms master
 
 ### Suggested path for data structures
 
+1. array (see array playground)
 1. fixedLengthArray
 1. queue
 1. stack
