@@ -14,7 +14,9 @@ To be a data structures and algorithms master
 
 ### Suggested path for algorithms
 
+1. sequential search
 1. binary search
+1. bubble sort
 
 ## Setup
 
@@ -36,8 +38,8 @@ If name pattern crashes, you can use the exact file path
  npx jest dataStructure/queue/queue.test.js
 ```
 
-Run a .js file (Example uses array-playground.js)
+Run a .js file (Example uses arrayPlayground.js)
 
 ```
-  node dataStructure/array/array-playground.js
+  node dataStructure/array/arrayPlayground.js
 ```
