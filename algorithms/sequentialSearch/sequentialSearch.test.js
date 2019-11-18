@@ -8,4 +8,8 @@ describe("sequential search", () => {
   it("should return index of bob if bob is the only person", () => {
     expect(sequentialSearch(["bob"], "bob")).toEqual(0);
   });
+
+  it("should return index of bob if bob is the third person", () => {
+    expect(sequentialSearch(["amy", "jane", "bob"], "bob")).toEqual(2);
+  });
 });
