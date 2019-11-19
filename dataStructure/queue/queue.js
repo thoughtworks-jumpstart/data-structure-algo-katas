@@ -1,22 +1,17 @@
-/**
- * Implement class Queue
- *
- */
-
 module.exports = class Queue {
   constructor() {
-    this.queue = [];
+    // set queue to empty array
   }
 
   enqueue(item) {
-    this.queue.push(item);
+    // add item to rear of the queue
   }
 
   dequeue() {
-    return this.queue.shift();
+    // remove item from front of queue and return item
   }
 
   peek() {
-    return this.queue[0];
+    // peek at the front of the queue
   }
 };
