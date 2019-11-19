@@ -1,6 +1,6 @@
-const { bubbleSort } = require('./bubbleSort');
-const { testSortAlgo } = require('../testSortAlgoHelper');
+const { bubbleSort } = require("./bubbleSort");
+const { testSortAlgo } = require("../testSortAlgoHelper");
 
-describe('bubbleSort', () => {
+describe("bubbleSort", () => {
   testSortAlgo(bubbleSort);
 });
