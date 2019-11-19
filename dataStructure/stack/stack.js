@@ -1,17 +1,17 @@
 module.exports = class Stack {
   constructor() {
-    this.stack = [];
+    // set stack to empty array
   }
 
   push(item) {
-    this.stack.push(item);
+    // push item to stack
   }
 
   pop() {
-    return this.stack.pop();
+    // pop item from stack
   }
 
   peek() {
-    return this.stack[this.stack.length - 1];
+    // peek at the item at the top of the stack
   }
 };
