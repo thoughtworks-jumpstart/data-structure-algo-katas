@@ -1,4 +1,4 @@
-const FixedLengthQueue = require('./fixedLengthQueue');
+const FixedLengthQueue = require('./FixedLengthQueue');
 
 describe('FixedLengthQueue', () => {
   it('should create an array of length passed in', () => {

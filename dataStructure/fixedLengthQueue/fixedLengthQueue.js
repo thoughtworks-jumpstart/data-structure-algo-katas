@@ -6,4 +6,6 @@ module.exports = class FixedLengthQueue {
   dequeue() {}
 
   peek() {}
+
+  getSize() {}
 };
