@@ -10,7 +10,7 @@ If list.head contains a node. list.head.next should return the next node in the 
 
 ## Instuctions
 
-Implement Node and Linklist.
+Implement Node and Linkedlist.
 
 Node
 

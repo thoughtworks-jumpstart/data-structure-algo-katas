@@ -8,6 +8,9 @@ module.exports = class Stack {
   }
 
   pop() {
+    //const lastItem = this.stack[this.stack.length-1]
+    //this.stack.slice[this.stack.length-2]
+    // return lastItem
     return this.stack.pop();
   }
 

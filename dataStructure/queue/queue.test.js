@@ -1,4 +1,4 @@
-const Queue = require('./queue');
+const Queue = require('./Queue');
 
 describe('Queue', () => {
   it('can enqueue and dequeue an element', () => {
@@ -16,7 +16,7 @@ describe('Queue', () => {
     expect(queue.dequeue()).toEqual('apple');
     expect(queue.dequeue()).toEqual('banana');
     expect(queue.dequeue()).toEqual('citrus');
-    expect(queue.dequeue()).toEqual(undefined);
+    expect(queue.dequeue()).toBeUndefined();
   });
 
   it('can peek at the next item', () => {
